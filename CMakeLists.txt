@@ -9,5 +9,5 @@ file(
         "Box2D/**/*.cpp"
 )
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 add_library(box2d STATIC ${BOX2D_SOURCES})
+target_include_directories(box2d PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
